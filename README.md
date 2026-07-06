@@ -1,6 +1,11 @@
 # Livro-Caixa de Residência
 Projeto de demonstração para visualização e gerenciamento de despesas de uma residência fictícia. O objetivo é apresentar uma aplicação full‑stack com backend em ASP.NET Core (.NET 10) e frontend em React + TypeScript.
 
+## Hospedagem e demonstração
+
+Eu opcionalmente escolhi hospedar o sistema em Render para uma visualização melhor.
+Clique [aqui](https://homeexpensesystem.onrender.com) se deseja ver o sistema em funcionamento.
+
 ## Objetivo
 
 Mostrar competências em:
