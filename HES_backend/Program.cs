@@ -16,7 +16,7 @@ builder.Services.AddControllers()
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Frontend", policy =>
-        policy.WithOrigins("http://localhost:5173", "https://transactions.onrender.com")
+        policy.WithOrigins("http://localhost:5173", "https://homeexpensesystem.onrender.com")
             .AllowAnyHeader()
             .AllowAnyMethod());
 });
@@ -57,7 +57,7 @@ using (var scope = app.Services.CreateScope())
 
     var dbSeeder = scope.ServiceProvider.GetRequiredService<DbSeeder>();
 
-    dbSeeder.SeedAsync();
+    await dbSeeder.SeedAsync();
 
 }
 

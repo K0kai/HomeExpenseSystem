@@ -41,6 +41,7 @@ Instale as ferramentas abaixo antes de executar o projeto:
 Principais escolhas realizadas durante o desenvolvimento:
 
 - Optou‑se por SQLite para persistência por facilitar o clone e a execução local sem necessidade de configurar um servidor de banco. Em produção recomendaria um banco gerenciado em nuvem.
+- O banco é semeado automaticamente com dados fictícios em ambiente de desenvolvimento para facilitar a visualização e validação da interface.
 - Não foi incluída a biblioteca TanStack Query por decisão de reduzir o escopo do teste técnico; a integração poderia melhorar o cache, sincronização e UX em uma versão futura.
 
 
