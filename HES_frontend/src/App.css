@@ -1,0 +1,367 @@
+.app-shell {
+  width: min(1200px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 34px 0 54px;
+}
+
+.app-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.8fr);
+  gap: 30px;
+  align-items: end;
+  min-height: 300px;
+  padding: 34px 0 32px;
+}
+
+.header-copy {
+  position: relative;
+  padding-left: 22px;
+}
+
+.header-copy::before {
+  position: absolute;
+  top: 4px;
+  bottom: 6px;
+  left: 0;
+  width: 3px;
+  border-radius: 99px;
+  background: linear-gradient(var(--accent), var(--accent-2));
+  content: '';
+}
+
+.header-description {
+  max-width: 650px;
+  margin-top: 18px;
+  color: var(--text);
+  font-size: 17px;
+}
+
+.eyebrow,
+.section-tag {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+}
+
+.section-tag {
+  display: inline-flex;
+  margin-bottom: 8px;
+}
+
+.summary-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--border-strong);
+  border-radius: 8px;
+  background: var(--border);
+  box-shadow: var(--soft-shadow);
+}
+
+.summary-strip span,
+.summary-strip strong {
+  display: grid;
+  min-height: 78px;
+  align-content: center;
+  gap: 4px;
+  padding: 16px 18px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent),
+    var(--surface-strong);
+  color: var(--text-h);
+  font-size: 22px;
+  font-weight: 850;
+}
+
+.summary-strip small {
+  color: var(--text-soft);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.status-message {
+  margin-bottom: 18px;
+  padding: 13px 15px;
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+  background: var(--accent-bg);
+  color: var(--text-h);
+  font-size: 15px;
+}
+
+.workspace-grid,
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+    var(--surface);
+  padding: 22px;
+  text-align: left;
+  box-shadow: var(--soft-shadow);
+}
+
+.panel::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  content: '';
+}
+
+.panel-heading {
+  margin-bottom: 18px;
+}
+
+.panel-heading p {
+  color: var(--text);
+  font-size: 14px;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 14px;
+  color: var(--text-h);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--input-bg);
+  color: var(--text-h);
+  font: inherit;
+  font-size: 15px;
+  letter-spacing: 0;
+  padding: 10px 12px;
+}
+
+input::placeholder {
+  color: #5d6878;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--accent);
+  outline: 3px solid var(--accent-bg);
+}
+
+select option {
+  background: var(--input-bg);
+  color: var(--text-h);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(150px, 0.7fr);
+  gap: 12px;
+}
+
+button {
+  min-height: 43px;
+  border: 0;
+  border-radius: 7px;
+  background: linear-gradient(135deg, var(--button-bg), #b87324);
+  color: #171109;
+  cursor: pointer;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 850;
+  letter-spacing: 0;
+  padding: 10px 14px;
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease;
+}
+
+button:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--button-hover), #d79a3b);
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.list-panel {
+  min-height: 270px;
+}
+
+.record-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.record-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 68px;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(13, 21, 32, 0.82);
+}
+
+.record-list li:hover {
+  border-color: rgba(232, 192, 125, 0.3);
+}
+
+.record-list strong {
+  display: block;
+  color: var(--text-h);
+  font-size: 16px;
+}
+
+.record-list span,
+small {
+  color: var(--text-soft);
+  font-size: 13px;
+}
+
+.record-list button {
+  flex: 0 0 auto;
+  min-height: 34px;
+  background: rgba(251, 113, 133, 0.16);
+  color: #fecdd3;
+  font-size: 13px;
+  padding: 7px 10px;
+}
+
+.record-list button:hover {
+  background: rgba(251, 113, 133, 0.28);
+}
+
+.empty-state {
+  display: grid;
+  min-height: 150px;
+  place-items: center;
+  border: 1px dashed rgba(174, 184, 200, 0.28);
+  border-radius: 8px;
+  color: var(--text-soft);
+  text-align: center;
+}
+
+.income {
+  color: var(--success) !important;
+  font-weight: 850;
+}
+
+.expense {
+  color: var(--danger) !important;
+  font-weight: 850;
+}
+
+.totals-panel {
+  border-color: var(--border-strong);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: right;
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+th {
+  color: var(--text-soft);
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+td {
+  color: var(--text-h);
+  font-weight: 750;
+}
+
+td small {
+  display: block;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.total-row td {
+  border-bottom: 0;
+  background: rgba(232, 192, 125, 0.08);
+  color: var(--accent);
+}
+
+@media (max-width: 900px) {
+  .app-header,
+  .workspace-grid,
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-header {
+    min-height: auto;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    width: min(100% - 20px, 1200px);
+    padding-top: 18px;
+  }
+
+  .header-copy {
+    padding-left: 16px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .record-list li {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .record-list button {
+    width: 100%;
+  }
+}
